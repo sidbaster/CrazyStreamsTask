@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 @AllArgsConstructor
 public class CrazyStreams {
@@ -43,6 +44,17 @@ public class CrazyStreams {
      * @return map of accounts by its ids
      */
     public Map<Long, Account> collectAccountsById() {
+        throw new ExerciseNotCompletedException();
+    }
+
+
+    /**
+     * Returns a {@link List} of all first names and last names of all accounts,
+     * sorted in alphabetical order.
+     *
+     * @return a sorted list of first and last names
+     */
+    public List<String> collectAllNamesSorted() {
         throw new ExerciseNotCompletedException();
     }
 }

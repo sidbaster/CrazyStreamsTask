@@ -68,6 +68,18 @@ public class CrazyStreamsTest {
         assertEquals(accounts.get(3), idToAccountMap.get(4L));
     }
 
+    @Test
+    @Order(12)
+    void collectAllNamesSorted() {
+        List<String> expectedNames = List.of(
+                "Butler", "Cardenas", "Donovan", "Justin",
+                "Lucas", "Lynn", "Nolan", "Olivia");
+
+        List<String> actualNames = streams.collectAllNamesSorted();
+
+        assertEquals(expectedNames, actualNames);
+    }
+
     private List<Account> getExpectedList() {
         return Arrays.asList(accounts.get(0), accounts.get(2));
     }
